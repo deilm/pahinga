@@ -127,3 +127,22 @@ ul li a:hover:before {
       transform: translateY(-20px) scale(1.1);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .logo {
+      flex-direction: column;
+      margin-top: 20px;
+  }
+
+  ul {
+      flex-direction: column;
+  }
+
+  ul li {
+      margin: 10px 0;
+  }
+
+  ul li a {
+      font-size: 16px;
+  }
+}
