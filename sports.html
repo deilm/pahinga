@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympic Sports</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #f8c7e8, #926483);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #886085;
+            color: #fff;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin-left: 30px;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .main-nav a::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            transition: width 0.3s;
+        }
+
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            padding: 40px 10%;
+            text-align: center;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+        }
+
+        h1, h2 {
+            color: #0e000b;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .sport-container {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s;
+        }
+
+        .sport-container:nth-child(odd) {
+            background-color: #f7bcf8;
+        }
+
+        .sport-container:nth-child(even) {
+            background-color: #f7bcf8;
+        }
+
+        .sport-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .sport-img {
+            max-width: 120px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .sport-info {
+            text-align: left;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #080006;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #915d88;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #915d88;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="pics/logo.png" alt="Olympic Rings Logo">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Olympic Sports</h2>
+            <p>The Olympic Games feature a wide variety of sports that bring together the best athletes from around the world. Below are some of the sports included in the Olympic program:</p>
+
+            <div class="sport-container">
+                <img src="pics/archery.jpg" alt="Archery" class="sport-img">
+                <div class="sport-info">
+                    <h3>Archery</h3>
+                    <p>A sport where athletes aim arrows at targets from a specific distance.</p>
+                </div>
+            </div>
+
+            <div class="sport-container">
+                <img src="pics/basketball.jpg" alt="Basketball" class="sport-img">
+                <div class="sport-info">
+                    <h3>Basketball</h3>
+                    <p>A fast-paced sport where two teams of five players try to score by shooting a ball through the opponent's hoop.</p>
+                </div>
+            </div>
+
+            <div class="sport-container">
+                <img src="pics/boxing.jpg" alt="Boxing" class="sport-img">
+                <div class="sport-info">
+                    <h3>Boxing</h3>
+                    <p>A combat sport where two athletes compete to score points through punches while avoiding blows.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sport-container">
+            <img src="pics/cycling.jpg" alt="Cycling" class="sport-img">
+            <div class="sport-info">
+                <h3>Cycling</h3>
+                <p>A sport where athletes race on bicycles in various disciplines such as road racing and track cycling.</p>
+            </div>
+        </div>
+        <div class="sport-container">
+            <img src="pics/diving.jpg" alt="Diving" class="sport-img">
+            <div class="sport-info">
+                <h3>Diving</h3>
+                <p>A sport where athletes dive into a pool from a platform or springboard, performing acrobatic maneuvers.</p>
+            </div>
+        </div>
+        <div class="sport-container">
+            <img src="pics/gymnastics.jpg" alt="Gymnastics" class="sport-img">
+            <div class="sport-info">
+                <h3>Gymnastics</h3>
+                <p>A sport involving performances of exercises requiring physical strength, flexibility, balance, and coordination.</p>
+            </div>
+        </div>
+        <div class="sport-container">
+            <img src="pics/judo.jpg" alt="Judo" class="sport-img">
+            <div class="sport-info">
+                <h3>Judo</h3>
+                <p>A martial art where the goal is to throw or pin the opponent to the ground.</p>
+            </div>
+        </div>
+        <div class="sport-container">
+            <img src="pics/rowing.jpg" alt="Rowing" class="sport-img">
+            <div class="sport-info">
+                <h3>Rowing</h3>
+                <p>A water sport where athletes race in boats using oars to propel themselves forward.</p>
+            </div>
+        </div>
+        <div class="sport-container">
+            <img src="pics/swimming.jpg" alt="Swimming" class="sport-img">
+            <div class="sport-info">
+                <h3>Swimming</h3>
+                <p>A water-based sport where athletes race to swim various distances in different styles.</p>
+            </div>
+        </div>
+        <div class="sport-container">
+            <img src="pics/tennis.jpg" alt="Tennis" class="sport-img">
+            <div class="sport-info">
+                <h3>Tennis</h3>
+                <p>A racquet sport where players hit a ball over a net to score points by making the ball land in the opponent's court.</p>
+            </div>
+        </div>
+        <div class="sport-container">
+            <img src="pics/volleyball.jpg" alt="Volleyball" class="sport-img">
+            <div class="sport-info">
+                <h3>Volleyball</h3>
+                <p>A sport where two teams try to score points by sending a ball over a net and into the opponent's side of the court.</p>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Olympic Sports. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
