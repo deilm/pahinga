@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympics Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            background-image: url('pics/olympic-rings-bg.png'); /* Subtle Olympic Rings Background */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh; /* Set body height to 100% of the viewport */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        header {
+            background: linear-gradient(90deg, #005bbc, #ff4c00, #f4c300, #009f3d, #000000); /* Olympic Colors */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        main {
+            padding: 40px 10%;
+            flex: 1; /* Allow main content to take available space */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        section {
+            background: #ffffff;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-top: 5px solid #005bbc; /* Blue border for sections */
+        }
+
+        h1, h2 {
+            color: #000000;
+            margin-bottom: 20px;
+            font-size: 30px;
+            cursor: pointer; /* Make headings look clickable */
+            transition: color 0.3s ease;
+        }
+
+        h1:hover, h2:hover {
+            color: #ff4c00; /* Change color on hover */
+        }
+
+        p {
+            color: #333333;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 5px solid #009f3d; /* Green border for cards */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Slight scale effect */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.1); /* Slight zoom on image hover */
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #005bbc;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hide footer, as per request */
+        footer {
+            display: none;
+        }
+        
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="pics/logo.png" alt="Olympic Rings Logo">
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1 onclick="scrollToSection('olympic-games')">Olympic Games</h1>
+            <h1 onclick="scrollToSection('history')">History of the Olympics</h1>
+        </section>
+
+        <section id="olympic-games">
+            <h2>Olympic Games</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="pics/swimming.jpg" alt="Swimming">
+                    <h3>Swimming</h3>
+                    <p>An iconic sport in the Olympics, featuring a variety of styles like freestyle, butterfly, and backstroke, requiring speed and endurance.</p>
+                </div>
+                <div class="card">
+                    <img src="pics/gymnastics.jpg" alt="Gymnastics">
+                    <h3>Gymnastics</h3>
+                    <p>A display of strength, flexibility, and artistry, gymnastics includes events like floor routines and balance beam.</p>
+                </div>
+                <div class="card">
+                    <img src="pics/rowing.jpg" alt="Rowing">
+                    <h3>Rowing</h3>
+                    <p>A sport of coordination and power, rowing involves teams or individuals racing boats over a set distance on water.</p>
+                </div>
+                <div class="card">
+                    <img src="pics/basketball.jpg" alt="Basketball">
+                    <h3>Basketball</h3>
+                    <p>Teamwork and skill come together in this exciting sport, where nations compete for the gold medal on the court.</p>
+                </div>
+                <div class="card">
+                    <img src="pics/tennis.jpg" alt="Tennis">
+                    <h3>Tennis</h3>
+                    <p>Players showcase agility and power in singles and doubles matches, making tennis a popular Olympic event.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
