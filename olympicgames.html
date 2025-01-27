@@ -6,39 +6,38 @@
     <title>Olympics Website</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        box-sizing: border-box;
         }
 
         body {
             background-color: #ffffff;
-            background-image: url('pics/olympic-rings-bg.png'); /* Subtle Olympic Rings Background */
-            background-repeat: no-repeat;
+            background-image: url('pics/olympic-rings-bg.png');
             background-position: center;
             background-size: cover;
-            height: 100vh; /* Set body height to 100% of the viewport */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            height: 100vh; 
+            overflow-x: hidden; 
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
         }
 
         header {
-            background: linear-gradient(90deg, #005bbc, #ff4c00, #f4c300, #009f3d, #000000); /* Olympic Colors */
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 24px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
+         background: linear-gradient(90deg, #005bbc, #ff4c00, #f4c300, #009f3d, #000000); /* Olympic Colors */
+         color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
 
         main {
             padding: 40px 10%;
-            flex: 1; /* Allow main content to take available space */
-            overflow-y: auto; /* Enable vertical scrolling */
+            flex: 1; 
+            overflow-y: auto; 
         }
 
         section {
@@ -47,19 +46,19 @@
             margin: 20px 0;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            border-top: 5px solid #005bbc; /* Blue border for sections */
+            border-top: 5px solid #005bbc; 
         }
 
         h1, h2 {
             color: #000000;
             margin-bottom: 20px;
             font-size: 30px;
-            cursor: pointer; /* Make headings look clickable */
+            cursor: pointer; 
             transition: color 0.3s ease;
         }
 
         h1:hover, h2:hover {
-            color: #ff4c00; /* Change color on hover */
+            color: #ff4c00; 
         }
 
         p {
@@ -74,25 +73,26 @@
             gap: 20px;
         }
         .welcome-img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 100%; /* Ensures the image doesn't overflow */
-        }
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800%; 
+    height: auto; 
+}
 
         .card {
             background: #f9f9f9;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            border-left: 5px solid #009f3d; /* Green border for cards */
+            border-left: 5px solid #009f3d; 
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
-            transform: scale(1.05); /* Slight scale effect */
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+            transform: scale(1.05); 
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
 
         .card img {
@@ -104,7 +104,7 @@
         }
 
         .card img:hover {
-            transform: scale(1.1); /* Slight zoom on image hover */
+            transform: scale(1.1); 
         }
 
         .card h3 {
@@ -117,13 +117,9 @@
             font-size: 16px;
             color: #555;
         }
-
-        /* Smooth scrolling behavior */
         html {
             scroll-behavior: smooth;
         }
-
-        /* Hide footer, as per request */
         footer {
             display: none;
         }
