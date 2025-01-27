@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 Olympic Athletes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #e7f0fa;
+        }
+
+        header {
+            background-color: #b3cde8;
+            color: #003f63;
+            padding: 10px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 80px;
+        }
+
+        .mainNav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .mainNav li {
+            margin-left: 30px;
+        }
+
+        .mainNav a {
+            text-decoration: none;
+            color: #003f63;
+            font-size: 18px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .mainNav a::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #6daedb;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: width 0.5s;
+        }
+
+        .mainNav a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        section {
+            background: #ffffff;
+            border: 2px solid #d4e4f2;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #003f63;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #4a708b;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .athletesGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .athleteContainer {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #d4e4f2;
+            transition: transform 0.3s ease;
+        }
+
+        .athleteContainer:hover {
+            transform: scale(1.05);
+            background-color: #b3cde8;
+            color: #003f63;
+        }
+
+        .athleteImg {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .athleteInfo {
+            text-align: left;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #6daedb;
+            color: #ffffff;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 30px;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #4a708b;
+        }
+
+        @media (max-width: 768px) {
+            .athleteContainer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .athleteImg {
+                margin: 0 0 10px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="pics/logo.png" alt="Olympic Rings Logo">
+        </div>
+        <nav class="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Gold Medalists</h2>
+            <p>Here are some of the standout athletes who brought home the gold for their countries in the 2024 Olympic
+                Games:</p>
+            <div class="athletesGrid">
+                <div class="athleteContainer">
+                    <img src="pics/bolt.jpg" alt="Usain Bolt" class="athleteImg">
+                    <div class="athleteInfo">
+                        <h3>Usain Bolt</h3>
+                        <p>Track and Field (Jamaica)</p>
+                    </div>
+                </div>
+                <div class="athleteContainer">
+                    <img src="pics/biles.jpg" alt="Simone Biles" class="athleteImg">
+                    <div class="athleteInfo">
+                        <h3>Simone Biles</h3>
+                        <p>Gymnastics (USA)</p>
+                    </div>
+                </div>
+                <div class="athleteContainer">
+                    <img src="pics/caeleb.jpg" alt="Caeleb Dressel" class="athleteImg">
+                    <div class="athleteInfo">
+                        <h3>Caeleb Dressel</h3>
+                        <p>Swimming (USA)</p>
+                    </div>
+                </div>
+                <div class="athleteContainer">
+                    <img src="pics/chopara.jpg" alt="Neeraj Chopra" class="athleteImg">
+                    <div class="athleteInfo">
+                        <h3>Neeraj Chopra</h3>
+                        <p>Javelin Throw (India)</p>
+                    </div>
+                </div>
+                <div class="athleteContainer">
+                    <img src="pics/Elaine.jpg" alt="Elaine Thompson-Herah" class="athleteImg">
+                    <div class="athleteInfo">
+                        <h3>Elaine Thompson-Herah</h3>
+                        <p>Track and Field (Jamaica)</p>
+                    </div>
+                </div>
+                <div class="athleteContainer">
+                    <img src="pics/marcell.jpg" alt="Marcell Jacobs" class="athleteImg">
+                    <div class="athleteInfo">
+                        <h3>Marcell Jacobs</h3>
+                        <p>Sprinting (Italy)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Record-Breaking Performances</h2>
+            <p>Many athletes not only won medals but also broke records. These performances were truly extraordinary and
+                will go down in history as some of the greatest moments in Olympic history:</p>
+            <div class="athletesGrid">
+                <div class="athleteContainer">
+                    <img src="pics/Michael.jpg" alt="Michael Phelps" class="athleteImg">
+                    <div class="athleteInfo">
+                        <h3>Michael Phelps</h3>
+                        <p>Swimming (USA) - Most Olympic golds ever</p>
+                    </div>
+                </div>
+                <div class="athleteContainer">
+                    <img src="pics/caeleb.jpg" alt="Caeleb Dressel" class="athleteImg">
+                    <div class="athleteInfo">
+                        <h3>Caeleb Dressel</h3>
+                        <p>Swimming (USA) - Fastest 100m butterfly record</p>
+                    </div>
+                </div>
+                <div class="athleteContainer">
+                    <img src="pics/florence.jpg" alt="Florence Griffith Joyner" class="athleteImg">
+                    <div class="athleteInfo">
+                        <h3>Florence Griffith Joyner</h3>
+                        <p>Track and Field (USA) - 200m world record</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
